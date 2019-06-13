@@ -1,9 +1,14 @@
+<div class="main-body">
 <div class="container">
-  <div class="card-deck">
+  <div class="card-columns">
     {{#each bands}}
     <div class="card">
-      {{this}}
+      <img src="{{this.Image}}" alt="Image">
+    <div class="card-body">
+       <h5>{{this.Name}}</h5>
+    </div>
     </div>
     {{/each}}
   </div>
+</div>
 </div>

@@ -16,7 +16,7 @@ cloudinary.config({
 api_secret:'AS_y6ZzH7FAjeoIxF1IjtMFKzQg'
 });
 
-router.post('/create',upload.single('picture'),async(req,res)=>{
+router.post('/create',upload.single('image'),async(req,res)=>{
   const Image=await cloudinary.v2.uploader.upload(req.file.path);
   const Name=req.body.name;
   Band.create({

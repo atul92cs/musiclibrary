@@ -12,4 +12,15 @@ const router=express.Router();
       });
    });
  });
+ router.get('/add',(req,res)=>{
+   band.findAll({}).then(result=>{
+      const bands=result;
+      res.render('addartist',{bands:bands});
+   }).catch(err=>{
+      res.status(403).json({
+        message:'error occured',
+        error:err
+      });
+   });
+ });
  module.exports=router;
