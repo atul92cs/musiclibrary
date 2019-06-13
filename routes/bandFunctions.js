@@ -33,16 +33,4 @@ router.post('/create',upload.single('picture'),async(req,res)=>{
     });
   });
 });
-router.get('/',(req,res)=>{
-  Band.findAll({}).then(result=>{
-    res.status(200).json({
-      result
-    });
-  }).catch(err=>{
-     res.status(403).json({
-       message:'error occured',
-       error:err
-     });
-  });
-});
 module.exports=router;
