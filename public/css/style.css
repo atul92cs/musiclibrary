@@ -1,0 +1,14 @@
+.main-body
+{
+  margin-top: 5vh;
+}
+.card img
+{
+  height: 25Vh;
+  width: 49vh;
+  padding: 2vh 2vh 2vh 2vh;
+}
+.card h5
+{
+  text-align: center;
+}
