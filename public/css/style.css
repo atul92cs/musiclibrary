@@ -4,20 +4,26 @@
 }
 .card img
 {
-  height: 25Vh;
+  height: 34Vh;
   width: 49vh;
-  padding: 2vh 2vh 2vh 2vh;
+  padding: 2vh 2vh 0vh 2vh;
 }
 .card h5
 {
   text-align: center;
+  padding-top: 0vh !important;
+
 }
 .table-section img
 {
-  height: 35vh;
-  width: 55vh;
+  height:75vh;
+  width: 135vh;
 }
 .table-section
 {
   margin-top: 10vh;
+}
+th
+{
+  text-align: center !important;
 }
