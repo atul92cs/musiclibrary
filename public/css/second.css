@@ -2,3 +2,22 @@
 {
   margin-top: 5vh;
 }
+.card
+{
+  margin-left: 45vh;
+  margin-right: 45vh;
+  text-align: center;
+}
+th
+{
+  text-align: center;
+}
+td
+{
+  text-align: center;
+}
+.artist-body
+{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
