@@ -44,9 +44,8 @@ const sequelize=require('sequelize');
      const bands=result;
      album.findAll({where:{bandid:id}}).then((result) => {
        const albums=result;
-       res.render('artist',{bands:bands,albums:albums});
-       console.log(bands);
-       console.log(albums);
+       res.render('artist',{bands:bands,albums:albums,layout:'layout'});
+    
     }).catch((err) => {
       console.log(err);
     })
