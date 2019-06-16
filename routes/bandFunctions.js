@@ -1,4 +1,5 @@
 const Band=require('../models/Bands');
+const Album=require('../models/Albums');
 const express=require('express');
 const router=express.Router();
 const cloudinary=require('cloudinary');
@@ -27,6 +28,23 @@ router.post('/create',upload.single('image'),async(req,res)=>{
       message:'Band created'
     });
   }).catch(err=>{
+    res.status(405).json({
+      message:'Error occured',
+      error:err
+    });
+  });
+});
+router.post('/createalbum',(req,res)=>{
+  const bandid=req.body.bandid;
+  const Name=req.body.name;
+  Album.create({
+    bandid:bandid,
+    Name:Name
+  }).then(()=>{
+    res.status(200).json({
+      message:'Album created'
+    });
+  }).catch((err) => {
     res.status(405).json({
       message:'Error occured',
       error:err
