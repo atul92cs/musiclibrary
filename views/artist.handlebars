@@ -1,0 +1,30 @@
+<div class="artist-body">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header">
+        {{bands.Name}}
+      </div>
+      <div class="card-body">
+        <img src="{{bands.Image}}" alt="">
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <th scope="col">id</th>
+        <th scope="col">Album name</th>
+      </thead>
+      <tbody>
+        {{#each albums}}
+        <tr scope="col">
+        <td>{{this.id}}</td>
+
+        <td scope="col">{{this.Name}}</td>
+
+      </tr>
+
+        {{/each}}
+      </tbody>
+    </table>
+
+  </div>
+</div>

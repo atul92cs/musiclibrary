@@ -4,8 +4,9 @@
     {{#each bands}}
     <div class="card">
       <img src="{{this.Image}}" alt="Image">
-    <div class="card-body">
+    <div class="card-body text-center">
        <h5 class="mt-1">{{this.Name}}</h5>
+      <a href="/artist/{{this.id}}"> <button type="button" class="btn btn-primary" name="button">Albums</button></a>
     </div>
     </div>
     {{/each}}

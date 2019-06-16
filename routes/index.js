@@ -37,8 +37,21 @@ const sequelize=require('sequelize');
    }).catch((err) => {
      console.log(err);
    });
-
-
-
+ });
+ router.get('/artist/:id',(req,res)=>{
+   const id=req.params.id;
+   band.findOne({where:{id}}).then((result) => {
+     const bands=result;
+     album.findAll({where:{bandid:id}}).then((result) => {
+       const albums=result;
+       res.render('artist',{bands:bands,albums:albums});
+       console.log(bands);
+       console.log(albums);
+    }).catch((err) => {
+      console.log(err);
+    })
+   }).catch((err) => {
+       console.log(err);
+   });
  });
  module.exports=router;
