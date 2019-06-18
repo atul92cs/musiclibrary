@@ -8,6 +8,11 @@
   margin-right: 45vh;
   text-align: center;
 }
+.card img
+{
+  height: 84vh;
+  width: 104vh;
+}
 th
 {
   text-align: center;
