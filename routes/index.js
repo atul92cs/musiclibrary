@@ -30,7 +30,7 @@ const sequelize=require('sequelize');
     const  bands=result;
       album.sequelize.query('select albums.id,albums.Name as AlbumName,bands.Name as BandName from albums join bands on albums.bandid=bands.id',{type:album.sequelize.QueryTypes.SELECT}).then(result=>{
       const   albums=result;
-         res.render('addalbum',{bands:bands,albums:albums,layout:'layout'});
+         res.render('addalbum',{bands:bands,albums:albums,layout:'spec'});
       }).catch((err) => {
        console.log(err);
      });
@@ -45,7 +45,7 @@ const sequelize=require('sequelize');
      album.findAll({where:{bandid:id}}).then((result) => {
        const albums=result;
        res.render('artist',{bands:bands,albums:albums,layout:'layout'});
-    
+
     }).catch((err) => {
       console.log(err);
     })
