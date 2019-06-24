@@ -51,4 +51,26 @@ router.post('/createalbum',(req,res)=>{
     });
   });
 });
+router.delete('/deletealbum/:id',(req,res)=>{
+  const id=req.params.id;
+  Album.destroy({where:{id:id}}).then(result=>{
+    if(result===1)
+    {
+      res.status(200).json({
+        message:'Album deleted'
+      });
+    }
+    else {
+      res.status(405).json({
+           message:'Error occured',
+           error:err
+      });
+    }
+  }).catch((err) => {
+      res.status(403).json({
+        message:'error occured',
+        error:err
+      });
+  });
+});
 module.exports=router;
